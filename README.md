@@ -1,23 +1,8 @@
-hostapd-mana 2.6 @ Pineapple NANO + TETRA / OpenWRT
+hostapd-mana-light 2.6 @ Pineapple NANO + TETRA / OpenWRT
 ===================================
 hostapd-mana patches by Dominic White (singe) & Ian de Villiers @ sensepost (research@sensepost.com)  
-ported to OpenWRT by: Andreas Nilsen @adde88
-
-Last Update: 06.01.2018
------------------------
-Updated to work properly with the latest FW updates to the WiFi Pineapples!
-Type this to install mana-toolkit for the Pineapple:  
-```bash
-wget -qO- https://raw.githubusercontent.com/adde88/hostapd-mana/master/INSTALL.sh | bash -s -- -v -v
-```
-  
-Also:  
-New improved launch script!  
-Simply type 'launch-mana' (without the quotes) to start the attack.  
-More to come... :)   
-
-Yours truly, Andreas Nilsen. - @adde88
-
+ported to OpenWRT by: Andreas Nilsen @adde88  
+This repo. is for building/installing ONLY the hostapd-mana binary  
 
 Overview
 --------
@@ -31,29 +16,22 @@ This will attempt to track the hostapd-mana releases from Sensepost.
 
 Contents
 --------
-It contains:
+This repo. contains:
 * hostapd-mana - modified hostapd that implements our new karma attacks
-* crackapd - a tool for offloading the cracking of EAP creds to an external tool and re-adding them to the hostapd EAP config (auto crack 'n add)
-* sslstrip2 & dns2proxy
-* net-creds
-* firelamb
 
 Dependencies
 ------------
-Dependencies: libubus, tinyproxy, stunnel, ip, python, openssl   
+Dependencies: libubus   
 (You should run: "opkg update" before installing.)
 
 
 Installation
 ------------
-Install both IPK files located within the folder ./bin/ar71xx/packages/base/  
-hostapd-mana_2.6-5_ar71xx.ipk  
-asleap_2.2-1_ar71xx.ipk
+Install the IPK file located within the folder ./bin/ar71xx/packages/base/  
+hostapd-mana-light_2.6-1_ar71xx.ipk  
 
-Everything will be installed to your usual folders:  
-/usr/share/mana-toolkit/  
+Config-files will be installed to your usual folder:   
 /etc/mana-toolkit/  
-/var/lib/mana-toolkit/
 
 License
 -------
